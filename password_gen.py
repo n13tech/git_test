@@ -1,15 +1,15 @@
 import random
 
-abcd = 'qwertyuiopasdfghjklzxcvbnm1234567890_'
-abcd += abcd.upper()
+letters = 'qwertyuiopasdfghjklzxcvbnm1234567890_'
+letters += letters.upper()
 
 def pass_gen(n=12):
-    return ''.join([random.choice(abcd) for i in range(n)])
+    return ''.join([random.choice(letters) for i in range(n)])
     
-n = int(input('Введите количество символов пароля: '))
+password_length = int(input('Введите количество символов пароля: '))
 
-res = pass_gen(n=n)
+result = pass_gen(n=password_length)
 
-assert len(res) == n, 'С паролем что-то не так'
+assert len(result) == password_length, 'С паролем что-то не так'
 
-print(res)
+print(result)
